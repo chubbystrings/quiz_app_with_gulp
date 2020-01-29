@@ -1,0 +1,29 @@
+{
+  "name": "gulp_quiz",
+  "version": "1.0.0",
+  "description": "quiz_app_for_utme is a simple javascript quiz/game app designed for utme/waec/jamb students to test their knowledge on various subjects provided by aloc.ng API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chubbystrings/quiz_app_for_utme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chubbystrings/quiz_app_for_utme/issues"
+  },
+  "homepage": "https://github.com/chubbystrings/quiz_app_for_utme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.10.2"
+  }
+}

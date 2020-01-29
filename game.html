@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="app.css">
+    <title>game</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div id="lds-hourglass">
+            <p id="errMessage"></p>   
+        </div>
+        
+        <div id="game" class="justify-center flex-column hidden">
+            <small  id="subjectHead"></small>
+            <!-- /*heads up display */ -->
+            <div id="hud">
+                <div id="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Questions
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull">
+
+                        </div>
+                    </div>
+                </div>
+                 <!-- <div id="counterBar">
+        
+                    <div  id="hud-item">
+                            <h2 class="hud-main-text" id="timer">
+                                
+                            </h2>
+                    </div> 
+
+                    
+                    
+                </div>  -->
+                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
+                        <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="12" />
+                        <text id="text" transform="rotate(90 60,60)" x="50%" y="50%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em"></text>
+                        
+                </svg>
+                
+            </div>
+            <em id="questionSection"></em>
+            <h3 id="question"></h3>
+            <p id="passMessage"></p>
+            <p id="failMessage"></p>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4"></p>
+            </div>
+            <a style="font-size: 1.5rem; text-align: center; color: orangered" class="" href="/">Cancel</a>
+            <small>Site Created By ChubbyStrings 
+                &copy; <script>document.write(new Date().getFullYear());</script>
+            </small>
+        </div>
+        
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

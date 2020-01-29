@@ -1,0 +1,85 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+        
+    .progress {
+    transform: rotate(-90deg);
+    }
+
+
+    .progress__value {
+    
+        stroke-linecap: round;
+    }
+
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
+            <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="12" />
+            <text id="text" transform="rotate(90 60,60)" x="50%" y="50%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em"></text>
+            
+        </svg>
+    </div>
+
+    <script>
+        var progressValue = document.querySelector('.progress__value');
+        const text = document.getElementById('text');
+        var RADIUS = 54;
+        var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+        function progress(value) {
+            var progress = value / 100;
+            var dashoffset = CIRCUMFERENCE * (1 - progress);
+            
+            console.log('progress:', value + '%', '|', 'offset:', dashoffset)
+            
+            progressValue.style.strokeDashoffset = dashoffset;
+            text.textContent = value
+        }
+
+        progressValue.style.strokeDasharray = CIRCUMFERENCE;
+        progress(10);
+    </script>
+           
+
+        <canvas id="cvs"></canvas>
+        <script>
+            var canvas = document.getElementById("cvs");
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+            var ctx = canvas.getContext("2d");
+            
+            var percent = 30;
+            
+            ctx.beginPath();
+            ctx.arc(innerWidth/2, innerHeight/2, 100, 0, Math.PI * 2);
+            ctx.strokeStyle = "#111";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
+            
+            var angle = percent/100 * 360;
+            ctx.beginPath();
+            ctx.arc(innerWidth/2, innerHeight/2, 100, -90 * Math.PI/180, (angle - 90) * Math.PI/180);
+            ctx.strokeStyle = "yellow";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
+            
+            ctx.textBaseline = "middle";
+            ctx.textAlign = "center";
+            ctx.font = "40px arial bold";
+            ctx.fillStyle = "black"
+            ctx.fillText(percent + "%", innerWidth/2, innerHeight/2);
+            
+            </script>
+</body>
+</html>
+ -->
